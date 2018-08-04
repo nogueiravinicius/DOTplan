@@ -2,7 +2,7 @@ DOTPlan Framework for ROS Systems
 =================
 
 This framework incorporates Probabilistic AI Planning into ROS systems. Its default planner is Prob-PRP, a MAXPROB solver. The action dispatching interface is based on ROSPlan, 
-Its demo is a expansion from ROSPlan Interface Quadrotor, using navigation library present on husky_navigation. This framework relays is based on the execution of a FSM given in DOT format. It includes a visualization tool based on XDot. It was implemented for ROS Indigo running on Ubuntu 14.04.
+Its demo is a expansion from ROSPlan Interface Quadrotor, using navigation library. This framework relays is based on the execution of a FSM given in DOT format. It includes a visualization tool based on XDot. It was implemented for ROS Indigo running on Ubuntu 14.04.
 
 
 
