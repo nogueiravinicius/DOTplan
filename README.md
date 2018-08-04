@@ -99,7 +99,9 @@ roslaunch xdot roslaunch xdot prp_plan_standalone_globalFOND.launch
 ```
 
 (3)playpen_demo:
+
 copy all files from xdot/resources/PDDL/quad sim playpen to xdot/resources/PDDL
+
 copy waypoints.txt from DOTPlan_Quadcopter/common/playpen to DOTPlan_Quadcopter/common
 ```
 cd
@@ -109,7 +111,9 @@ roslaunch xdot roslaunch xdot prp_plan.launch
 ```
 
 (4)city_demo:
+
 copy all files from xdot/resources/PDDL/quadsimcity to xdot/resources/PDDL
+
 copy waypoints.txt from DOTPlan_Quadcopter/common/city to DOTPlan_Quadcopter/common
 ```
 cd
