@@ -2,15 +2,57 @@
 drop_q1_wp2_wp1_coke1:
 1: [] -> ['cokeat(coke1 wp2)'] / [] -> ['not(cokeat(coke1 wp1))'] / [] -> ['not(holdingcoke(coke1))']
 
-land_q1:
-1: [] -> ['not(airborne(q1))'] / [] -> ['finished(q1)'] / [] -> ['grounded(q1)']
+move-to_q1_wp2_wp3_fl2_fl3_fl4:
+1: [] -> ['not(quadat(q1 wp2))'] / [] -> ['quadat(q1 wp3)'] / [] -> ['quadfuel(fl3)'] / [] -> ['not(quadfuel(fl4))']
+2: [] -> ['not(quadat(q1 wp2))'] / [] -> ['quadat(q1 wp3)'] / [] -> ['quadfuel(fl2)'] / [] -> ['not(quadfuel(fl4))']
 
 pickup_q1_coke1_wp1:
 1: [] -> ['holdingcoke(coke1)']
 
-move-to_q1_wp1_wp2_fl8_fl9_fl10:
-1: [] -> ['not(quadat(q1 wp1))'] / [] -> ['quadat(q1 wp2)'] / [] -> ['quadfuel(fl9)'] / [] -> ['not(quadfuel(fl10))']
-2: [] -> ['not(quadat(q1 wp1))'] / [] -> ['quadat(q1 wp2)'] / [] -> ['quadfuel(fl8)'] / [] -> ['not(quadfuel(fl10))']
-
 takeoff_q1:
 1: [] -> ['not(grounded(q1))'] / [] -> ['airborne(q1)']
+
+move-to_q1_wp1_wp2_fl6_fl7_fl8:
+1: [] -> ['not(quadat(q1 wp1))'] / [] -> ['quadat(q1 wp2)'] / [] -> ['quadfuel(fl7)'] / [] -> ['not(quadfuel(fl8))']
+2: [] -> ['not(quadat(q1 wp1))'] / [] -> ['quadat(q1 wp2)'] / [] -> ['quadfuel(fl6)'] / [] -> ['not(quadfuel(fl8))']
+
+move-to_q1_wp10_wp1_fl7_fl8_fl9:
+1: [] -> ['not(quadat(q1 wp10))'] / [] -> ['quadat(q1 wp1)'] / [] -> ['quadfuel(fl8)'] / [] -> ['not(quadfuel(fl9))']
+2: [] -> ['not(quadat(q1 wp10))'] / [] -> ['quadat(q1 wp1)'] / [] -> ['quadfuel(fl7)'] / [] -> ['not(quadfuel(fl9))']
+
+opendoor_q1_wp10_wp1_wp2:
+1: [] -> ['connected(wp1 wp2)'] / [] -> ['connected(wp2 wp1)']
+
+pickup_q1_coke2_wp2:
+1: [] -> ['holdingcoke(coke2)']
+
+move-to_q1_wp2_wp3_fl4_fl5_fl6:
+1: [] -> ['not(quadat(q1 wp2))'] / [] -> ['quadat(q1 wp3)'] / [] -> ['quadfuel(fl5)'] / [] -> ['not(quadfuel(fl6))']
+2: [] -> ['not(quadat(q1 wp2))'] / [] -> ['quadat(q1 wp3)'] / [] -> ['quadfuel(fl4)'] / [] -> ['not(quadfuel(fl6))']
+
+move-to_q1_wp1_wp2_fl5_fl6_fl7:
+1: [] -> ['not(quadat(q1 wp1))'] / [] -> ['quadat(q1 wp2)'] / [] -> ['quadfuel(fl6)'] / [] -> ['not(quadfuel(fl7))']
+2: [] -> ['not(quadat(q1 wp1))'] / [] -> ['quadat(q1 wp2)'] / [] -> ['quadfuel(fl5)'] / [] -> ['not(quadfuel(fl7))']
+
+move-to_q1_wp1_wp2_fl4_fl5_fl6:
+1: [] -> ['not(quadat(q1 wp1))'] / [] -> ['quadat(q1 wp2)'] / [] -> ['quadfuel(fl5)'] / [] -> ['not(quadfuel(fl6))']
+2: [] -> ['not(quadat(q1 wp1))'] / [] -> ['quadat(q1 wp2)'] / [] -> ['quadfuel(fl4)'] / [] -> ['not(quadfuel(fl6))']
+
+move-to_q1_wp2_wp3_fl5_fl6_fl7:
+1: [] -> ['not(quadat(q1 wp2))'] / [] -> ['quadat(q1 wp3)'] / [] -> ['quadfuel(fl6)'] / [] -> ['not(quadfuel(fl7))']
+2: [] -> ['not(quadat(q1 wp2))'] / [] -> ['quadat(q1 wp3)'] / [] -> ['quadfuel(fl5)'] / [] -> ['not(quadfuel(fl7))']
+
+move-to_q1_wp10_wp1_fl6_fl7_fl8:
+1: [] -> ['not(quadat(q1 wp10))'] / [] -> ['quadat(q1 wp1)'] / [] -> ['quadfuel(fl7)'] / [] -> ['not(quadfuel(fl8))']
+2: [] -> ['not(quadat(q1 wp10))'] / [] -> ['quadat(q1 wp1)'] / [] -> ['quadfuel(fl6)'] / [] -> ['not(quadfuel(fl8))']
+
+drop_q1_wp3_wp2_coke2:
+1: [] -> ['cokeat(coke2 wp3)'] / [] -> ['not(cokeat(coke2 wp2))'] / [] -> ['not(holdingcoke(coke2))']
+
+move-to_q1_wp2_wp3_fl3_fl4_fl5:
+1: [] -> ['not(quadat(q1 wp2))'] / [] -> ['quadat(q1 wp3)'] / [] -> ['quadfuel(fl4)'] / [] -> ['not(quadfuel(fl5))']
+2: [] -> ['not(quadat(q1 wp2))'] / [] -> ['quadat(q1 wp3)'] / [] -> ['quadfuel(fl3)'] / [] -> ['not(quadfuel(fl5))']
+
+move-to_q1_wp1_wp10_fl8_fl9_fl10:
+1: [] -> ['not(quadat(q1 wp1))'] / [] -> ['quadat(q1 wp10)'] / [] -> ['quadfuel(fl9)'] / [] -> ['not(quadfuel(fl10))']
+2: [] -> ['not(quadat(q1 wp1))'] / [] -> ['quadat(q1 wp10)'] / [] -> ['quadfuel(fl8)'] / [] -> ['not(quadfuel(fl10))']

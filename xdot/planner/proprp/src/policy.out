@@ -1,18 +1,72 @@
 
-If holds: var0:1 var6:11 var1:11
+If holds: var2:4 var1:3
 Execute: goal / SC / d=0
 
-If holds: var0:1 var6:11 var4:0 var1:0
-Execute: drop q1 wp2 wp1 coke1 / SC / d=1
+If holds: var8:4 var7:0 var2:3 var1:3
+Execute: drop q1 wp3 wp2 coke2 / SC / d=1
 
-If holds: var0:0 var6:11 var4:0 var1:0
-Execute: land q1 / SC / d=2
+If holds: var0:0 var8:3 var9:7 var7:0 var2:3 var1:3
+Execute: move-to q1 wp2 wp3 fl5 fl6 fl7 / SC / d=2
 
-If holds: var0:0 var7:1 var6:0 var4:0 var1:0
-Execute: move-to q1 wp1 wp2 fl8 fl9 fl10 / SC / d=3
+If holds: var0:0 var8:3 var9:6 var7:0 var2:3 var1:3
+Execute: move-to q1 wp2 wp3 fl4 fl5 fl6 / SC / d=2
 
-If holds: var0:1 var7:1 var6:0 var4:0 var1:0
-Execute: takeoff q1 / SC / d=4
+If holds: var0:0 var8:3 var9:5 var7:0 var2:3 var1:3
+Execute: move-to q1 wp2 wp3 fl3 fl4 fl5 / SC / d=2
 
-If holds: var0:1 var7:1 var6:0 var1:0
-Execute: pickup q1 coke1 wp1 / SC / d=5
+If holds: var0:0 var8:3 var9:4 var7:0 var2:3 var1:3
+Execute: move-to q1 wp2 wp3 fl2 fl3 fl4 / SC / d=2
+
+If holds: var0:0 var8:3 var9:7 var7:0 var2:3 var6:0 var1:1
+Execute: drop q1 wp2 wp1 coke1 / SC / d=3
+
+If holds: var0:0 var8:3 var9:6 var7:0 var2:3 var6:0 var1:1
+Execute: drop q1 wp2 wp1 coke1 / SC / d=3
+
+If holds: var0:0 var8:3 var9:5 var7:0 var2:3 var6:0 var1:1
+Execute: drop q1 wp2 wp1 coke1 / SC / d=3
+
+If holds: var0:0 var8:3 var9:4 var7:0 var2:3 var6:0 var1:1
+Execute: drop q1 wp2 wp1 coke1 / SC / d=3
+
+If holds: var0:0 var8:3 var9:7 var2:3 var6:0 var1:1
+Execute: pickup q1 coke2 wp2 / SC / d=4
+
+If holds: var0:0 var8:3 var9:6 var2:3 var6:0 var1:1
+Execute: pickup q1 coke2 wp2 / SC / d=4
+
+If holds: var0:0 var8:3 var9:5 var2:3 var6:0 var1:1
+Execute: pickup q1 coke2 wp2 / SC / d=4
+
+If holds: var0:0 var8:3 var9:4 var2:3 var6:0 var1:1
+Execute: pickup q1 coke2 wp2 / SC / d=4
+
+If holds: var0:0 var3:0 var8:1 var9:8 var2:3 var6:0 var1:1
+Execute: move-to q1 wp1 wp2 fl6 fl7 fl8 / SC / d=5
+
+If holds: var0:0 var3:0 var8:1 var9:7 var2:3 var6:0 var1:1
+Execute: move-to q1 wp1 wp2 fl5 fl6 fl7 / SC / d=5
+
+If holds: var0:0 var3:0 var8:1 var9:6 var2:3 var6:0 var1:1
+Execute: move-to q1 wp1 wp2 fl4 fl5 fl6 / SC / d=5
+
+If holds: var0:0 var3:0 var8:2 var9:9 var2:3 var6:0 var1:1
+Execute: move-to q1 wp10 wp1 fl7 fl8 fl9 / SC / d=6
+
+If holds: var0:0 var3:0 var8:2 var9:8 var2:3 var6:0 var1:1
+Execute: move-to q1 wp10 wp1 fl6 fl7 fl8 / SC / d=6
+
+If holds: var0:0 var8:2 var9:9 var2:3 var6:0 var1:1
+Execute: opendoor q1 wp10 wp1 wp2 / SC / d=7
+
+If holds: var0:0 var8:2 var9:8 var2:3 var6:0 var1:1
+Execute: opendoor q1 wp10 wp1 wp2 / SC / d=7
+
+If holds: var0:0 var8:1 var9:1 var2:3 var6:0 var1:1
+Execute: move-to q1 wp1 wp10 fl8 fl9 fl10 / SC / d=8
+
+If holds: var0:0 var8:1 var9:1 var2:3 var1:1
+Execute: pickup q1 coke1 wp1 / SC / d=9
+
+If holds: var0:1 var8:1 var9:1 var2:3 var1:1
+Execute: takeoff q1 / SC / d=10

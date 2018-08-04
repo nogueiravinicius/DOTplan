@@ -25,7 +25,7 @@
  :precondition (and (quadat ?q ?wp1) (connected ?wp1 ?wp2)(airborne ?q)(quadfuel ?fuel3)(fuelmapping ?fuel1 ?fuel2)(fuelmapping ?fuel2 ?fuel3))
  :effect (and (not (quadat ?q ?wp1)) (quadat ?q ?wp2)
 	  (oneof (and(quadfuel ?fuel2)(not(quadfuel ?fuel3)))
-		 (and(quadfuel ?fuel1)(not(quadfuel ?fuel3)))
+		               (and(quadfuel ?fuel1)(not(quadfuel ?fuel3)))
 			       )))
 
 (:action refuel

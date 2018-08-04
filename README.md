@@ -33,6 +33,9 @@ Its demo is a expansion from ROSPlan Interface Quadrotor, using navigation libra
 
 ## Install
 
+### Dependencies
+
+
 Install ROS Indigo (DOTPlan):
 ```
 http://wiki.ros.org/indigo/Installation/Ubuntu
@@ -65,6 +68,56 @@ Navigation Stack (Demos):
 sudo apt-get install ros-indigo-map-server ros-indigo-amcl ros-indigo-move-base ros-indigo-teleop-twist-keyboard 
 sudo apt-get install ros-indigo-dwa-local-planner
 ```
+
+### Compiling Source
+```
+cd
+cd catkin_ws
+source devel/setup.bash
+mkdir -p DOTPlan/src
+cd DOTPlan/src
+git clone https://github.com/nogueiravinicius/DOTplan
+catkin_make
+```
+
+### Running
+
+(1)stand_alone Prob-PRP:
+```
+cd
+cd catkin_ws
+source devel/setup.bash
+roslaunch xdot roslaunch xdot prp_plan_standalone_global.launch
+```
+
+(2)stand_alone PRP:
+```
+cd
+cd catkin_ws
+source devel/setup.bash
+roslaunch xdot roslaunch xdot prp_plan_standalone_globalFOND.launch
+```
+
+(3)playpen_demo:
+copy all files from xdot/resources/PDDL/quad sim playpen to xdot/resources/PDDL
+copy waypoints.txt from DOTPlan_Quadcopter/common/playpen to DOTPlan_Quadcopter/common
+```
+cd
+cd catkin_ws
+source devel/setup.bash
+roslaunch xdot roslaunch xdot prp_plan.launch
+```
+
+(4)city_demo:
+copy all files from xdot/resources/PDDL/quadsimcity to xdot/resources/PDDL
+copy waypoints.txt from DOTPlan_Quadcopter/common/city to DOTPlan_Quadcopter/common
+```
+cd
+cd catkin_ws
+source devel/setup.bash
+roslaunch xdot roslaunch xdot prp_plan_city.launch
+```
+
 
 ## References
 
