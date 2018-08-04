@@ -1,0 +1,44 @@
+------
+State:1
+cokeat(coke1 wp1)
+grounded(q1)
+quadat(q1 wp1)
+quadfuel(fl10)
+------
+State:3
+cokeat(coke1 wp1)
+grounded(q1)
+holdingcoke(coke1)
+quadat(q1 wp1)
+quadfuel(fl10)
+------
+State:4
+airborne(q1)
+cokeat(coke1 wp1)
+holdingcoke(coke1)
+quadat(q1 wp1)
+quadfuel(fl10)
+------
+State:5
+airborne(q1)
+cokeat(coke1 wp1)
+holdingcoke(coke1)
+quadat(q1 wp2)
+------
+State:6
+airborne(q1)
+cokeat(coke1 wp1)
+holdingcoke(coke1)
+quadat(q1 wp2)
+------
+State:7
+cokeat(coke1 wp1)
+grounded(q1)
+holdingcoke(coke1)
+quadat(q1 wp2)
+------
+State:8
+cokeat(coke1 wp1)
+grounded(q1)
+holdingcoke(coke1)
+quadat(q1 wp2)

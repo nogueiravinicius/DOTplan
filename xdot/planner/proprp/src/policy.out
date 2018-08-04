@@ -1,0 +1,18 @@
+
+If holds: var0:1 var6:11 var1:11
+Execute: goal / SC / d=0
+
+If holds: var0:1 var6:11 var4:0 var1:0
+Execute: drop q1 wp2 wp1 coke1 / SC / d=1
+
+If holds: var0:0 var6:11 var4:0 var1:0
+Execute: land q1 / SC / d=2
+
+If holds: var0:0 var7:1 var6:0 var4:0 var1:0
+Execute: move-to q1 wp1 wp2 fl8 fl9 fl10 / SC / d=3
+
+If holds: var0:1 var7:1 var6:0 var4:0 var1:0
+Execute: takeoff q1 / SC / d=4
+
+If holds: var0:1 var7:1 var6:0 var1:0
+Execute: pickup q1 coke1 wp1 / SC / d=5

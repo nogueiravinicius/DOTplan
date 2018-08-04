@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+  <include file="$(find dotplan_interface_quadrotor)/worlds/launch/start.launch">
+   <arg name="world" value="$(find dotplan_interface_quadrotor)/worlds/gazebo/city.world"/> 
+  </include>
+
+</launch>

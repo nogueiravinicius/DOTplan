@@ -1,0 +1,186 @@
+ <param name="planner_command" value="(cd PLANNER ; ./prp DOMAIN PROBLEM --dump-policy 2 --final-fsap-free-round 1 --planlocal 0 --partial-planlocal 0 --limit-planlocal 0 )" />
+
+(:action drop-package-at-station
+ :parameters (?pkg - package ?wp1 ?wp2 - waypoint ?w1 ?w2 ?w3 - weightlvl)
+ :precondition (and (pkgat ?pkg ?wp1) (quadat ?wp2)(stationat ?wp2)(inquad ?pkg)(grounded)(weightquad ?w3)(weightpkg ?pkg ?w2)(addweight ?w1 ?w2 ?w3))
+ :effect (and (free)(not (pkgat ?pkg ?wp1)) (pkgat ?pkg ?wp2) (not(inquad ?pkg))(not(weightquad ?w3))(weightquad ?w1)))
+)
+
+python validator.py ~/catkin_ws/src/DOTPlan/xdot/resources/PDDL/domainfo.pddl ~/catkin_ws/src/DOTPlan/xdot/resources/PDDL/problem.pddl ~/catkin_ws/src/DOTPlan/xdot/planner/proprp/prp-scripts/human_policy.pol prp
+
+                  -{ General Statistics }-
+
+       Monotonicity violations: 0
+             Successful states: 51 +/- 0
+                       Replans: 0 +/- 0
+                       Actions: 51 +/- 0
+            State-Action Pairs: 169
+  Forbidden State-Action Pairs: 25913
+               Strongly Cyclic: False
+                  Policy Score: 0.277
+                     Succeeded: 1 / 1
+ Depth limit (of 1000) reached: 0 / 1
+
+
+                  -{ Timing Statistics }-
+
+        Regression Computation: 0s
+         Engine Initialization: 0s
+                   Search Time: 115.4s
+           Policy Construction: 0.56s
+ Evaluating the policy quality: 0.16s
+              Using the policy: 0.26s
+          Just-in-case Repairs: 171.4s
+                Simulator time: 0s
+                    Total time: 171.64s
+
+
+-{ Controller Statistics }-
+
+	 Nodes: 235
+	 Edges: 323
+     Unhandled: 64
+	Strong: False
+ Strong Cyclic: False
+
+     Plan output: graph.dot
+Unhandled states: unhandled.states
+
+
+                  -{ General Statistics }-
+
+       Monotonicity violations: 0
+             Successful states: 51 +/- 0
+                       Replans: 0 +/- 0
+                       Actions: 51 +/- 0
+            State-Action Pairs: 169
+  Forbidden State-Action Pairs: 25913
+               Strongly Cyclic: False
+                  Policy Score: 0.277
+                     Succeeded: 1 / 1
+ Depth limit (of 1000) reached: 0 / 1
+
+
+                  -{ Timing Statistics }-
+
+        Regression Computation: 0s
+         Engine Initialization: 0.04s
+                   Search Time: 115.92s
+           Policy Construction: 0.62s
+ Evaluating the policy quality: 0.2s
+              Using the policy: 0.18s
+          Just-in-case Repairs: 172.52s
+                Simulator time: 0s
+                    Total time: 172.78s
+
+
+--fullstate
+
+                  -{ General Statistics }-
+
+       Monotonicity violations: 0
+             Successful states: 10 +/- 0
+                       Replans: 2 +/- 0
+                       Actions: 12 +/- 0
+            State-Action Pairs: 372
+  Forbidden State-Action Pairs: 31462
+               Strongly Cyclic: False
+                  Policy Score: 0.6
+                     Succeeded: 0 / 1
+ Depth limit (of 1000) reached: 0 / 1
+
+
+                  -{ Timing Statistics }-
+
+        Regression Computation: 0s
+         Engine Initialization: 0.08s
+                   Search Time: 1546.84s
+           Policy Construction: 7.66s
+ Evaluating the policy quality: 0.78s
+              Using the policy: 0.68s
+          Just-in-case Repairs: 1806.82s
+                Simulator time: 0.02s
+                    Total time: 1806.94s
+
+-{ Controller Statistics }-
+
+	 Nodes: 519
+	 Edges: 655
+     Unhandled: 147
+	Strong: False
+ Strong Cyclic: False
+
+--probabliidade aterrizar --fullstate 0
+
+                  -{ General Statistics }-
+
+       Monotonicity violations: 0
+             Successful states: 10 +/- 0
+                       Replans: 1 +/- 0
+                       Actions: 11 +/- 0
+            State-Action Pairs: 129
+  Forbidden State-Action Pairs: 17212
+               Strongly Cyclic: False
+                  Policy Score: 0.688
+                     Succeeded: 0 / 1
+ Depth limit (of 1000) reached: 0 / 1
+
+
+                  -{ Timing Statistics }-
+
+        Regression Computation: 0s
+         Engine Initialization: 0s
+                   Search Time: 117.14s
+           Policy Construction: 0.26s
+ Evaluating the policy quality: 0.3s
+              Using the policy: 0.18s
+          Just-in-case Repairs: 172.94s
+                Simulator time: 0s
+                    Total time: 173.14s
+
+-{ Controller Statistics }-
+
+	 Nodes: 136
+	 Edges: 187
+     Unhandled: 32
+	Strong: False
+ Strong Cyclic: False
+
+--probabliidade aterrizar --fullstate 1
+
+                  -{ General Statistics }-
+
+       Monotonicity violations: 0
+             Successful states: 45 +/- 0
+                       Replans: 0 +/- 0
+                       Actions: 45 +/- 0
+            State-Action Pairs: 131
+  Forbidden State-Action Pairs: 16197
+               Strongly Cyclic: False
+                  Policy Score: 0.712
+                     Succeeded: 1 / 1
+ Depth limit (of 1000) reached: 0 / 1
+
+
+                  -{ Timing Statistics }-
+
+        Regression Computation: 0s
+         Engine Initialization: 0.02s
+                   Search Time: 139.36s
+           Policy Construction: 0.76s
+ Evaluating the policy quality: 0.2s
+              Using the policy: 0.14s
+          Just-in-case Repairs: 197.92s
+                Simulator time: 0s
+                    Total time: 198.16s
+
+-{ Controller Statistics }-
+
+	 Nodes: 147
+	 Edges: 193
+     Unhandled: 35
+	Strong: True
+ Strong Cyclic: False
+
+
+

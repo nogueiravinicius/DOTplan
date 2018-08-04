@@ -1,0 +1,133 @@
+#include "globals.h"
+#include "operator.h"
+
+#include <string>
+#include <iostream>
+using namespace std;
+
+Prevail::Prevail(istream &in) {
+    in >> var >> prev;
+}
+
+PrePost::PrePost(istream &in) {
+    int condCount;
+    in >> condCount;
+    for (int i = 0; i < condCount; i++)
+        cond.push_back(Prevail(in));
+    in >> var >> pre >> post;
+}
+
+Operator::Operator(istream &in, bool axiom) {
+    marked = false;
+    nondet_index = -1;
+
+	total_weight = 1;
+    is_an_axiom = axiom;
+    if (!is_an_axiom) {
+        check_magic(in, "begin_operator");
+        in >> ws;
+        getline(in, name);
+        int count;
+        in >> count;
+        for (int i = 0; i < count; i++)
+            prevail.push_back(Prevail(in));
+        in >> count;
+        for (int i = 0; i < count; i++)
+            pre_post.push_back(PrePost(in));
+
+        int op_cost;
+        in >> op_cost;
+        cost = g_use_metric ? op_cost : 1;
+
+        g_min_action_cost = min(g_min_action_cost, cost);
+        g_max_action_cost = max(g_max_action_cost, cost);
+
+        check_magic(in, "end_operator");
+        
+        int det_pos = name.find("_DETDUP_");
+        if (det_pos != string::npos) {
+            // int det_num_pos = det_pos + 8;
+            int weight_pos = name.find("_WEIGHT_");
+            if (weight_pos != string::npos) {
+                int weight_num_pos = weight_pos + 8;
+                nondet_name = name.substr(0, det_pos) + name.substr(name.find(" "), string::npos);
+                istringstream(name.substr(weight_num_pos, string::npos)) >> weight;
+            } else {
+                nondet_name = name.substr(0, det_pos) + name.substr(name.find(" "), string::npos);
+                weight = 1;
+            }
+        } else {
+            nondet_name = name;
+            weight = 1;
+        }
+    } else {
+        name = "<axiom>";
+        cost = 0;
+        weight = 1;
+        check_magic(in, "begin_rule");
+        pre_post.push_back(PrePost(in));
+        check_magic(in, "end_rule");
+    }
+
+    marker1 = marker2 = false;
+    
+    
+    
+    /* ********************
+     * 
+     *  !!WARNING!!
+     * 
+     *   This operation doesn't check for inconsistencies
+     *    because we assume that was done to construct the
+     *    g_regressable_cond_ops data structure (see the
+     *    generate_regressable_ops function).
+     * 
+     * ************* */
+     
+    // Deal with the all-fire context (essentially every conditional head
+    //  and precondition rolled into one state)
+    all_fire_context = new PartialState();
+    
+    for (int i = 0; i < pre_post.size(); i++) {
+        (*all_fire_context)[pre_post[i].var] = pre_post[i].pre;
+        
+        for (int j = 0; j < pre_post[i].cond.size(); j++) {
+            (*all_fire_context)[pre_post[i].cond[j].var] = pre_post[i].cond[j].prev;
+        }
+    }
+    
+    for (int i = 0; i < prevail.size(); i++)
+        (*all_fire_context)[prevail[i].var] = prevail[i].prev;
+    
+    
+}
+
+void Prevail::dump() const {
+    cout << g_variable_name[var] << ": " << prev;
+}
+
+void PrePost::dump() const {
+    cout << g_variable_name[var] << ": " << pre << " => " << post;
+    if (!cond.empty()) {
+        cout << " if";
+        for (int i = 0; i < cond.size(); i++) {
+            cout << " ";
+            cond[i].dump();
+        }
+    }
+}
+
+void Operator::dump() const {
+    cout << name << " (" << nondet_name << "):";
+    for (int i = 0; i < prevail.size(); i++) {
+        cout << " [";
+        prevail[i].dump();
+        cout << "]";
+    }
+    for (int i = 0; i < pre_post.size(); i++) {
+        cout << " [";
+        pre_post[i].dump();
+        cout << "]";
+    }
+    cout << endl;
+}

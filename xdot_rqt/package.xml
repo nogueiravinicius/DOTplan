@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+	<name>xdot_rqt</name>
+	<version>0.0.0</version>
+	<description>The xdot_rqt package</description>
+	<maintainer email="nogueira.vinicius@hotmail.com">vinicius</maintainer>
+	<license>BSD</license>
+	
+
+	<buildtool_depend>catkin</buildtool_depend>
+
+	<run_depend>python-rospkg</run_depend>
+	<run_depend>rqt_gui</run_depend>
+	<run_depend>rqt_gui_py</run_depend>
+	<run_depend>std_msgs</run_depend>
+
+
+	<export>
+		<rqt_gui plugin="${prefix}/plugin.xml"/>
+	</export>
+</package>

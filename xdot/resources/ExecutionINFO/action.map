@@ -1,0 +1,16 @@
+
+drop_q1_wp2_wp1_coke1:
+1: [] -> ['cokeat(coke1 wp2)'] / [] -> ['not(cokeat(coke1 wp1))'] / [] -> ['not(holdingcoke(coke1))']
+
+land_q1:
+1: [] -> ['not(airborne(q1))'] / [] -> ['finished(q1)'] / [] -> ['grounded(q1)']
+
+pickup_q1_coke1_wp1:
+1: [] -> ['holdingcoke(coke1)']
+
+move-to_q1_wp1_wp2_fl8_fl9_fl10:
+1: [] -> ['not(quadat(q1 wp1))'] / [] -> ['quadat(q1 wp2)'] / [] -> ['quadfuel(fl9)'] / [] -> ['not(quadfuel(fl10))']
+2: [] -> ['not(quadat(q1 wp1))'] / [] -> ['quadat(q1 wp2)'] / [] -> ['quadfuel(fl8)'] / [] -> ['not(quadfuel(fl10))']
+
+takeoff_q1:
+1: [] -> ['not(grounded(q1))'] / [] -> ['airborne(q1)']

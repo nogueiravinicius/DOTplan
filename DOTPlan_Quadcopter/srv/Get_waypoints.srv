@@ -1,0 +1,3 @@
+string wpID
+---
+geometry_msgs/PoseStamped waypoint_pose

@@ -1,0 +1,32 @@
+(define (problem pquaddeliver)
+(:domain quaddeliver)
+(:objects
+          pkg1 - package
+          wp1 wp2 wp3 - waypoint
+	  fl1 fl2 fl3 fl4 fl5 fl6 fl7 - fuellvl)
+
+(:init
+	(quadat wp1)
+	(pkgat pkg1 wp1)
+	(deliverat pkg1 wp3)
+	(connected wp1 wp2)
+	(connected wp2 wp1)
+	(connected wp3 wp2)
+	(connected wp2 wp3)
+	(fuelmapping fl1 fl2)
+	(fuelmapping fl2 fl3)
+	(fuelmapping fl3 fl4)
+	(fuelmapping fl4 fl5)
+	(fuelmapping fl5 fl6)
+	(fuelmapping fl6 fl7)
+	(quadfuel fl7)
+	(maximumfuel fl7)
+	(minimumfuel fl1)
+	(stationat wp2))
+
+(:goal (and
+	  (quadfuel fl6)
+          (delivered pkg1)
+	  (quadat wp3)
+	  ))
+)

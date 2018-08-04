@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<launch>
+   
+  <!-- Start Gazebo with wg world running in (max) realtime -->
+  <include file="$(find hector_gazebo_worlds)/launch/playpen.launch"/>
+   
+  <!-- Spawn simulated quadrotor uav -->
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch" >
+    <arg name="model" value="$(find hector_quadrotor_description)/urdf/quadrotor_hokuyo_utm30lx.gazebo.xacro"/> 
+  </include>
+   
+  <!-- Start SLAM system  -->
+  <include file="/home/vinicius/catkin_ws/src/hector_slam-catkin/hector_mapping/launch/mapping_default.launch">
+    <arg name="odom_frame" value="world"/>
+  </include>
+
+ 
+  <!-- Start GeoTIFF mapper --> 
+  <include file="$(find hector_geotiff)/launch/geotiff_mapper.launch">
+    <arg name="trajectory_publish_rate" value="4"/> 
+  </include>
+ 
+  
+  <!-- Start rviz visualization with preset config -->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d /home/vinicius/quadnav/indoor_slam.rviz" output="screen"/>
+
+  <!-- quadrotor ROSPlan interface -->
+  <node pkg="rosplan_interface_quadrotor" type="rosplan_interface_quadrotor" name="rosplan_interface_quadrotor" output="screen"/>
+
+  <!-- MoveBase --> 
+ <include file="/home/vinicius/quadnav/husky_navigation/launch/amcl_demo.launch">
+  </include>
+
+  <!-- ROSPlan -->
+  <param name="domain_path" value="$(find rosplan_interface_quadrotor)/common/domain.pddl" />
+
+  <!-- knowledge base -->
+  <node name="rosplan_knowledge_base" pkg="rosplan_knowledge_base" type="knowledgeBase" respawn="false" output="screen">
+  </node>
+
+  <!-- scene database (MongoDB) -->
+  <node name="rosplan_scene_database" pkg="mongodb_store" type="mongodb_server.py" respawn="false" output="log">
+      <param name="database_path" value="$(find rosplan_knowledge_base)/common/mongoDB" />
+  </node>
+  <node name="rosplan_scene_message_store" pkg="mongodb_store" type="message_store_node.py" respawn="false" output="log">
+  </node>
+
+  <!-- planning system -->
+  <node name="rosplan_planning_system" pkg="rosplan_planning_system" type="planner" respawn="false" output="screen">
+    <!-- directory for generated files -->
+      <param name="data_path" value="$(find rosplan_interface_quadrotor)/common/" />
+      <param name="problem_path" value="$(find rosplan_interface_quadrotor)/common/problem.pddl" />
+    <!-- to run the planner -->
+      <param name="planner_command" value="timeout 10 $(find rosplan_interface_quadrotor)/common/bin/popf -n" />
+  </node>
+   
+</launch>

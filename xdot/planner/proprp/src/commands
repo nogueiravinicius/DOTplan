@@ -1,0 +1,4 @@
+ GERAR PLANO ./prp quad_domain quad_problem --dump-policy 2 --final-fsap-free-round 1
+ TRADUZIR PLANO python prp-scripts/translate_policy.py > human_policy.pol
+GERAR GRAPH python validator.py quad_domainfo quad_problem human_policy.out prp
+

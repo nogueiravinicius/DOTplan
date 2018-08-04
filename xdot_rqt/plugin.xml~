@@ -1,0 +1,35 @@
+<library path="src">
+
+  <class name="XDotPDDLExecutor" type="xdot_rqt.dispatcher.XDotPDDLExecutor" base_class_type="rqt_gui_py::Plugin">
+    <description>
+      Information on the current plan, actions and dispatch state.
+    </description>
+    <qtgui>
+      <group>
+        <icon type="theme">folder</icon>
+        <label>PDDL</label>
+        <statustip>Plugins related to the ROSPlan PDDL planning system.</statustip>
+      </group>
+      <label>PDDL Executor</label>
+      <icon type="theme">applications-science</icon>
+      <statustip>Info pane.</statustip>
+    </qtgui>
+  </class>
+
+  <class name="XDotPDDLSimulator" type="xdot_rqt.sim.XDotPDDLSimulator" base_class_type="rqt_gui_py::Plugin">
+    <description>
+      Simulates Plan.
+    </description>
+    <qtgui>
+      <group>
+        <icon type="theme">folder</icon>
+        <label>PDDL</label>
+        <statustip>Plugins related to the ROSPlan PDDL planning system.</statustip>
+      </group>
+      <label>PDDL Simulator</label>
+      <icon type="theme">applications-science</icon>
+      <statustip>Simulation pane.</statustip>
+    </qtgui>
+  </class>
+
+</library>

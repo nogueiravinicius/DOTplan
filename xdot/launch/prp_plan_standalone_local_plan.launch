@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!-- planning system -->
+  <node name="DOTPlan" pkg="xdot" type="xdotActionServer" respawn="false" output="screen">
+    <!-- directory for generated files -->
+      <param name="problem_file" value="$(find xdot)/resources/PDDL/problem.pddl" />
+      <param name="prefVizType" value=".pre" />
+      <param name="domain_file" value="$(find xdot)/resources/PDDL/domain.pddl" />
+      <param name="domainfo_file" value="$(find xdot)/resources/PDDL/domainfo.pddl"/>
+      <param name="planner_path" value="$(find xdot)/planner/proprp/src"/>
+      <param name="script_path" value="$(find xdot)/planner/proprp/prp-scripts"/>
+      <param name="translator_file" value="$(find xdot)/planner/proprp/prp-scripts/translate_policy.py"/>
+      <param name="validator_file" value="$(find xdot)/planner/proprp/prp-scripts/validator.py"/>
+      <param name="policy_file" value="$(find xdot)/planner/proprp/prp-scripts/human_policy.pol"/>
+      <param name="execution_files_path" value="$(find xdot)/resources/ExecutionINFO"/>
+    <!-- to run the planner -->
+
+      <param name="planner_command" value="(cd PLANNER ; ./prp DOMAIN PROBLEM --dump-policy 2 --final-fsap-free-round 1 --optimized-scd 1)" />
+      <param name="translator_command" value="(cd PLANNER ; python TRANSLATOR > POLICY)" />
+      <param name="preprograph_command" value="(cd PLANOUT ; SCRIPTS/preProcessGraph.py graph.dot graph.pre)" />
+      <param name="validator_command" value="(cd PLANOUT ; python VALIDATOR DOMAINFO PROBLEM POLICY
+prp)" />
+      
+  </node>
+  <node name="XDotViz" pkg="xdot" type="xdotViz.py" output="screen" />
+  <node name="runPPDDLExecutor" pkg="xdot" type="runPPDDLExecutor.sh" output="screen" /> 
+
+   
+</launch>

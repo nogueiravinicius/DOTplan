@@ -1,0 +1,840 @@
+
+If holds: var0:0 var1:0 var2:0
+Execute: goal / SC / d=0
+
+If holds: var9:1 var6:0 var13:3 var4:0 var11:2 var0:0 var2:0
+Execute: deliver-package pkg2 wp12 wp11 w0 w3 w3 / SC / d=1
+
+If holds: var9:1 var6:0 var13:3 var4:1 var11:2 var12:29 var3:0 var0:0 var2:0
+Execute: land fl35 fl36 / SC / d=2
+
+If holds: var9:1 var6:0 var13:3 var4:1 var11:2 var12:27 var3:0 var0:0 var2:0
+Execute: land fl33 fl34 / SC / d=2
+
+If holds: var9:1 var6:0 var13:3 var4:1 var11:2 var12:28 var3:0 var0:0 var2:0
+Execute: land fl34 fl35 / SC / d=2
+
+If holds: var9:1 var6:0 var13:3 var4:1 var11:3 var12:32 var0:0 var2:0
+Execute: move-with-w3-to wp12 wp11 fl34 fl35 fl36 fl37 fl38 fl39 / SC / d=3
+
+If holds: var9:1 var6:0 var13:3 var4:0 var11:3 var12:34 var3:0 var0:0 var2:0
+Execute: take-off fl39 fl40 / SC / d=4
+
+If holds: var9:1 var6:1 var13:0 var4:0 var11:3 var12:34 var0:0 var1:1 var2:0
+Execute: load-package pkg2 wp12 w0 w3 w3 / SC / d=5
+
+If holds: var9:1 var6:1 var13:0 var4:0 var11:3 var12:7 var0:0 var1:1 var2:0
+Execute: refuel wp12 fl16 fl40 / SC / d=6
+
+If holds: var9:1 var6:1 var13:0 var4:0 var11:3 var12:4 var0:0 var1:1 var2:0
+Execute: refuel wp12 fl13 fl40 / SC / d=6
+
+If holds: var9:1 var6:1 var13:0 var4:0 var11:3 var12:5 var0:0 var1:1 var2:0
+Execute: refuel wp12 fl14 fl40 / SC / d=6
+
+If holds: var9:1 var6:1 var13:0 var4:0 var11:3 var12:6 var0:0 var1:1 var2:0
+Execute: refuel wp12 fl15 fl40 / SC / d=6
+
+If holds: var9:1 var6:1 var13:0 var4:0 var11:3 var12:8 var0:0 var1:1 var2:0
+Execute: refuel wp12 fl17 fl40 / SC / d=6
+
+If holds: var9:1 var6:1 var13:0 var4:0 var11:3 var12:1 var0:0 var1:1 var2:0
+Execute: refuel wp12 fl10 fl40 / SC / d=6
+
+If holds: var9:1 var6:1 var13:0 var4:0 var11:3 var12:2 var0:0 var1:1 var2:0
+Execute: refuel wp12 fl11 fl40 / SC / d=6
+
+If holds: var9:1 var6:1 var13:0 var4:0 var11:3 var12:3 var0:0 var1:1 var2:0
+Execute: refuel wp12 fl12 fl40 / SC / d=6
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:3 var12:8 var3:0 var0:0 var1:1 var2:0
+Execute: land fl16 fl17 / SC / d=7
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:3 var12:5 var3:0 var0:0 var1:1 var2:0
+Execute: land fl13 fl14 / SC / d=7
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:3 var12:6 var3:0 var0:0 var1:1 var2:0
+Execute: land fl14 fl15 / SC / d=7
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:3 var12:7 var3:0 var0:0 var1:1 var2:0
+Execute: land fl15 fl16 / SC / d=7
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:3 var12:9 var3:0 var0:0 var1:1 var2:0
+Execute: land fl17 fl18 / SC / d=7
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:3 var12:2 var3:0 var0:0 var1:1 var2:0
+Execute: land fl10 fl11 / SC / d=7
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:3 var12:3 var3:0 var0:0 var1:1 var2:0
+Execute: land fl11 fl12 / SC / d=7
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:3 var12:4 var3:0 var0:0 var1:1 var2:0
+Execute: land fl12 fl13 / SC / d=7
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:2 var12:9 var0:0 var1:1 var2:0
+Execute: move-with-w0-to wp11 wp12 fl14 fl15 fl16 fl17 fl18 / SC / d=8
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:2 var12:10 var0:0 var1:1 var2:0
+Execute: move-with-w0-to wp11 wp12 fl15 fl16 fl17 fl18 fl19 / SC / d=8
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:2 var12:6 var0:0 var1:1 var2:0
+Execute: move-with-w0-to wp11 wp12 fl11 fl12 fl13 fl14 fl15 / SC / d=8
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:2 var12:7 var0:0 var1:1 var2:0
+Execute: move-with-w0-to wp11 wp12 fl12 fl13 fl14 fl15 fl16 / SC / d=8
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:2 var12:8 var0:0 var1:1 var2:0
+Execute: move-with-w0-to wp11 wp12 fl13 fl14 fl15 fl16 fl17 / SC / d=8
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:1 var12:14 var0:0 var1:1 var2:0
+Execute: move-with-w0-to wp10 wp11 fl18 fl19 fl20 fl21 fl22 / SC / d=9
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:3 var12:10 var0:0 var1:1 var2:0
+Execute: move-with-w0-to wp12 wp11 fl15 fl16 fl17 fl18 fl19 / SC / d=9
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:3 var12:12 var0:0 var1:1 var2:0
+Execute: move-with-w0-to wp12 wp11 fl16 fl17 fl18 fl19 fl20 / SC / d=9
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:1 var12:10 var0:0 var1:1 var2:0
+Execute: move-with-w0-to wp10 wp11 fl15 fl16 fl17 fl18 fl19 / SC / d=9
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:1 var12:12 var0:0 var1:1 var2:0
+Execute: move-with-w0-to wp10 wp11 fl16 fl17 fl18 fl19 fl20 / SC / d=9
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:1 var12:13 var0:0 var1:1 var2:0
+Execute: move-with-w0-to wp10 wp11 fl17 fl18 fl19 fl20 fl21 / SC / d=9
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:9 var12:15 var0:0 var1:1 var2:0
+Execute: move-with-w0-to wp7 wp10 fl19 fl20 fl21 fl22 fl23 / SC / d=10
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:2 var12:12 var0:0 var1:1 var2:0
+Execute: move-with-w0-to wp11 wp12 fl16 fl17 fl18 fl19 fl20 / SC / d=10
+
+If holds: var9:1 var6:1 var13:0 var4:1 var11:2 var12:13 var0:0 var1:1 var2:0
+Execute: move-with-w0-to wp11 wp12 fl17 fl18 fl19 fl20 fl21 / SC / d=10
+
+If holds: var9:1 var6:1 var13:0 var4:0 var11:9 var12:16 var3:0 var0:0 var1:1 var2:0
+Execute: take-off fl23 fl24 / SC / d=11
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:0 var11:9 var12:16 var1:1 var2:0
+Execute: deliver-package pkg1 wp2 wp7 w0 w1 w1 / SC / d=12
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:9 var12:17 var3:0 var1:1 var2:0
+Execute: land fl24 fl25 / SC / d=13
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:1 var12:19 var1:1 var2:0
+Execute: move-with-w1-to wp10 wp7 fl23 fl24 fl25 fl26 fl27 / SC / d=14
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:24 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp10 fl27 fl28 fl29 fl30 fl31 / SC / d=15
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:10 var12:28 var1:1 var2:0
+Execute: move-with-w1-to wp8 wp11 fl31 fl32 fl33 fl34 fl35 / SC / d=16
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:7 var12:30 var1:1 var2:0
+Execute: move-with-w1-to wp5 wp8 fl33 fl34 fl35 fl36 fl37 / SC / d=17
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:30 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp8 fl33 fl34 fl35 fl36 fl37 / SC / d=17
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:4 var12:32 var1:1 var2:0
+Execute: move-with-w1-to wp2 wp5 fl35 fl36 fl37 fl38 fl39 / SC / d=18
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:3 var12:32 var1:1 var2:0
+Execute: move-with-w1-to wp12 wp11 fl35 fl36 fl37 fl38 fl39 / SC / d=18
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:0 var11:4 var12:34 var3:0 var1:1 var2:0
+Execute: take-off fl39 fl40 / SC / d=19
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:0 var11:3 var12:34 var3:0 var1:1 var2:0
+Execute: take-off fl39 fl40 / SC / d=19
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:0 var13:3 var4:0 var11:4 var12:34 var1:1
+Execute: deliver-package pkg3 wp12 wp2 w1 w2 w3 / SC / d=20
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:0 var11:3 var12:5 var1:1 var2:0
+Execute: refuel wp12 fl14 fl40 / SC / d=20
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:0 var11:3 var12:3 var1:1 var2:0
+Execute: refuel wp12 fl12 fl40 / SC / d=20
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:0 var11:3 var12:1 var1:1 var2:0
+Execute: refuel wp12 fl10 fl40 / SC / d=20
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:0 var11:3 var12:2 var1:1 var2:0
+Execute: refuel wp12 fl11 fl40 / SC / d=20
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:0 var11:3 var12:4 var1:1 var2:0
+Execute: refuel wp12 fl13 fl40 / SC / d=20
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:0 var11:3 var12:38 var1:1 var2:0
+Execute: refuel wp12 fl8 fl40 / SC / d=20
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:0 var11:3 var12:39 var1:1 var2:0
+Execute: refuel wp12 fl9 fl40 / SC / d=20
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:0 var11:3 var12:37 var1:1 var2:0
+Execute: refuel wp12 fl7 fl40 / SC / d=20
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:0 var11:3 var12:36 var1:1 var2:0
+Execute: refuel wp12 fl6 fl40 / SC / d=20
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:0 var11:4 var12:34 var0:1 var1:1
+Execute: load-package pkg1 wp2 w2 w1 w3 / SC / d=21
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:3 var12:6 var3:0 var1:1 var2:0
+Execute: land fl14 fl15 / SC / d=21
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:3 var12:4 var3:0 var1:1 var2:0
+Execute: land fl12 fl13 / SC / d=21
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:3 var12:2 var3:0 var1:1 var2:0
+Execute: land fl10 fl11 / SC / d=21
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:3 var12:3 var3:0 var1:1 var2:0
+Execute: land fl11 fl12 / SC / d=21
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:3 var12:5 var3:0 var1:1 var2:0
+Execute: land fl13 fl14 / SC / d=21
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:3 var12:39 var3:0 var1:1 var2:0
+Execute: land fl8 fl9 / SC / d=21
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:3 var12:1 var3:0 var1:1 var2:0
+Execute: land fl9 fl10 / SC / d=21
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:3 var12:38 var3:0 var1:1 var2:0
+Execute: land fl7 fl8 / SC / d=21
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:3 var12:37 var3:0 var1:1 var2:0
+Execute: land fl6 fl7 / SC / d=21
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:0 var11:4 var12:19 var0:1 var1:1
+Execute: refuel wp2 fl27 fl40 / SC / d=22
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:8 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp12 fl13 fl14 fl15 fl16 fl17 / SC / d=22
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:6 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp12 fl11 fl12 fl13 fl14 fl15 / SC / d=22
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:7 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp12 fl12 fl13 fl14 fl15 fl16 / SC / d=22
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:4 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp12 fl9 fl10 fl11 fl12 fl13 / SC / d=22
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:5 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp12 fl10 fl11 fl12 fl13 fl14 / SC / d=22
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:3 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp12 fl8 fl9 fl10 fl11 fl12 / SC / d=22
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:2 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp12 fl7 fl8 fl9 fl10 fl11 / SC / d=22
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:0 var11:4 var12:20 var0:1 var1:1
+Execute: refuel wp2 fl28 fl40 / SC / d=22
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:0 var11:4 var12:21 var0:1 var1:1
+Execute: refuel wp2 fl29 fl40 / SC / d=22
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:0 var11:4 var12:23 var0:1 var1:1
+Execute: refuel wp2 fl30 fl40 / SC / d=22
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:0 var11:4 var12:16 var0:1 var1:1
+Execute: refuel wp2 fl24 fl40 / SC / d=22
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:0 var11:4 var12:17 var0:1 var1:1
+Execute: refuel wp2 fl25 fl40 / SC / d=22
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:0 var11:4 var12:18 var0:1 var1:1
+Execute: refuel wp2 fl26 fl40 / SC / d=22
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:0 var11:4 var12:13 var0:1 var1:1
+Execute: refuel wp2 fl21 fl40 / SC / d=22
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:0 var11:4 var12:14 var0:1 var1:1
+Execute: refuel wp2 fl22 fl40 / SC / d=22
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:0 var11:4 var12:15 var0:1 var1:1
+Execute: refuel wp2 fl23 fl40 / SC / d=22
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:0 var11:4 var12:9 var0:1 var1:1
+Execute: refuel wp2 fl18 fl40 / SC / d=22
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:0 var11:4 var12:10 var0:1 var1:1
+Execute: refuel wp2 fl19 fl40 / SC / d=22
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:0 var11:4 var12:12 var0:1 var1:1
+Execute: refuel wp2 fl20 fl40 / SC / d=22
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:4 var12:20 var3:0 var0:1 var1:1
+Execute: land fl27 fl28 / SC / d=23
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:10 var12:13 var1:1 var2:0
+Execute: move-with-w1-to wp8 wp11 fl17 fl18 fl19 fl20 fl21 / SC / d=23
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:10 var12:10 var1:1 var2:0
+Execute: move-with-w1-to wp8 wp11 fl15 fl16 fl17 fl18 fl19 / SC / d=23
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:10 var12:8 var1:1 var2:0
+Execute: move-with-w1-to wp8 wp11 fl13 fl14 fl15 fl16 fl17 / SC / d=23
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:10 var12:9 var1:1 var2:0
+Execute: move-with-w1-to wp8 wp11 fl14 fl15 fl16 fl17 fl18 / SC / d=23
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:10 var12:12 var1:1 var2:0
+Execute: move-with-w1-to wp8 wp11 fl16 fl17 fl18 fl19 fl20 / SC / d=23
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:3 var12:7 var1:1 var2:0
+Execute: move-with-w1-to wp12 wp11 fl12 fl13 fl14 fl15 fl16 / SC / d=23
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:1 var12:12 var1:1 var2:0
+Execute: move-with-w1-to wp10 wp11 fl16 fl17 fl18 fl19 fl20 / SC / d=23
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:1 var12:13 var1:1 var2:0
+Execute: move-with-w1-to wp10 wp11 fl17 fl18 fl19 fl20 fl21 / SC / d=23
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:10 var12:6 var1:1 var2:0
+Execute: move-with-w1-to wp8 wp11 fl11 fl12 fl13 fl14 fl15 / SC / d=23
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:10 var12:7 var1:1 var2:0
+Execute: move-with-w1-to wp8 wp11 fl12 fl13 fl14 fl15 fl16 / SC / d=23
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:4 var12:21 var3:0 var0:1 var1:1
+Execute: land fl28 fl29 / SC / d=23
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:4 var12:23 var3:0 var0:1 var1:1
+Execute: land fl29 fl30 / SC / d=23
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:4 var12:24 var3:0 var0:1 var1:1
+Execute: land fl30 fl31 / SC / d=23
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:4 var12:17 var3:0 var0:1 var1:1
+Execute: land fl24 fl25 / SC / d=23
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:4 var12:18 var3:0 var0:1 var1:1
+Execute: land fl25 fl26 / SC / d=23
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:4 var12:19 var3:0 var0:1 var1:1
+Execute: land fl26 fl27 / SC / d=23
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:4 var12:14 var3:0 var0:1 var1:1
+Execute: land fl21 fl22 / SC / d=23
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:4 var12:15 var3:0 var0:1 var1:1
+Execute: land fl22 fl23 / SC / d=23
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:4 var12:16 var3:0 var0:1 var1:1
+Execute: land fl23 fl24 / SC / d=23
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:4 var12:10 var3:0 var0:1 var1:1
+Execute: land fl18 fl19 / SC / d=23
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:4 var12:12 var3:0 var0:1 var1:1
+Execute: land fl19 fl20 / SC / d=23
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:4 var12:13 var3:0 var0:1 var1:1
+Execute: land fl20 fl21 / SC / d=23
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:7 var12:26 var0:1 var1:1
+Execute: move-with-w2-to wp5 wp2 fl28 fl29 fl30 fl31 fl32 fl33 / SC / d=24
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:9 var12:15 var1:1 var2:0
+Execute: move-with-w1-to wp7 wp8 fl19 fl20 fl21 fl22 fl23 / SC / d=24
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:9 var12:13 var1:1 var2:0
+Execute: move-with-w1-to wp7 wp8 fl17 fl18 fl19 fl20 fl21 / SC / d=24
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:9 var12:14 var1:1 var2:0
+Execute: move-with-w1-to wp7 wp8 fl18 fl19 fl20 fl21 fl22 / SC / d=24
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:9 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp12 fl14 fl15 fl16 fl17 fl18 / SC / d=24
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:14 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp8 fl18 fl19 fl20 fl21 fl22 / SC / d=24
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:15 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp8 fl19 fl20 fl21 fl22 fl23 / SC / d=24
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:16 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp10 fl20 fl21 fl22 fl23 fl24 / SC / d=24
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:10 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp8 fl15 fl16 fl17 fl18 fl19 / SC / d=24
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:12 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp8 fl16 fl17 fl18 fl19 fl20 / SC / d=24
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:17 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp10 fl21 fl22 fl23 fl24 fl25 / SC / d=24
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:13 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp8 fl17 fl18 fl19 fl20 fl21 / SC / d=24
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:7 var12:23 var0:1 var1:1
+Execute: move-with-w2-to wp5 wp2 fl25 fl26 fl27 fl28 fl29 fl30 / SC / d=24
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:7 var12:24 var0:1 var1:1
+Execute: move-with-w2-to wp5 wp2 fl26 fl27 fl28 fl29 fl30 fl31 / SC / d=24
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:7 var12:25 var0:1 var1:1
+Execute: move-with-w2-to wp5 wp2 fl27 fl28 fl29 fl30 fl31 fl32 / SC / d=24
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:7 var12:19 var0:1 var1:1
+Execute: move-with-w2-to wp5 wp2 fl22 fl23 fl24 fl25 fl26 fl27 / SC / d=24
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:7 var12:20 var0:1 var1:1
+Execute: move-with-w2-to wp5 wp2 fl23 fl24 fl25 fl26 fl27 fl28 / SC / d=24
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:7 var12:21 var0:1 var1:1
+Execute: move-with-w2-to wp5 wp2 fl24 fl25 fl26 fl27 fl28 fl29 / SC / d=24
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:7 var12:16 var0:1 var1:1
+Execute: move-with-w2-to wp5 wp2 fl19 fl20 fl21 fl22 fl23 fl24 / SC / d=24
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:7 var12:17 var0:1 var1:1
+Execute: move-with-w2-to wp5 wp2 fl20 fl21 fl22 fl23 fl24 fl25 / SC / d=24
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:7 var12:18 var0:1 var1:1
+Execute: move-with-w2-to wp5 wp2 fl21 fl22 fl23 fl24 fl25 fl26 / SC / d=24
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:10 var12:28 var0:1 var1:1
+Execute: move-with-w2-to wp8 wp5 fl30 fl31 fl32 fl33 fl34 fl35 / SC / d=25
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:1 var12:17 var1:1 var2:0
+Execute: move-with-w1-to wp10 wp7 fl21 fl22 fl23 fl24 fl25 / SC / d=25
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:1 var12:18 var1:1 var2:0
+Execute: move-with-w1-to wp10 wp11 fl22 fl23 fl24 fl25 fl26 / SC / d=25
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:1 var12:14 var1:1 var2:0
+Execute: move-with-w1-to wp10 wp11 fl18 fl19 fl20 fl21 fl22 / SC / d=25
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:1 var12:20 var1:1 var2:0
+Execute: move-with-w1-to wp10 wp11 fl24 fl25 fl26 fl27 fl28 / SC / d=25
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:1 var12:15 var1:1 var2:0
+Execute: move-with-w1-to wp10 wp11 fl19 fl20 fl21 fl22 fl23 / SC / d=25
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:1 var12:16 var1:1 var2:0
+Execute: move-with-w1-to wp10 wp11 fl20 fl21 fl22 fl23 fl24 / SC / d=25
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:1 var12:21 var1:1 var2:0
+Execute: move-with-w1-to wp10 wp11 fl25 fl26 fl27 fl28 fl29 / SC / d=25
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:10 var12:14 var1:1 var2:0
+Execute: move-with-w1-to wp8 wp11 fl18 fl19 fl20 fl21 fl22 / SC / d=25
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:10 var12:25 var0:1 var1:1
+Execute: move-with-w2-to wp8 wp5 fl27 fl28 fl29 fl30 fl31 fl32 / SC / d=25
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:10 var12:26 var0:1 var1:1
+Execute: move-with-w2-to wp8 wp5 fl28 fl29 fl30 fl31 fl32 fl33 / SC / d=25
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:10 var12:27 var0:1 var1:1
+Execute: move-with-w2-to wp8 wp5 fl29 fl30 fl31 fl32 fl33 fl34 / SC / d=25
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:10 var12:21 var0:1 var1:1
+Execute: move-with-w2-to wp8 wp5 fl24 fl25 fl26 fl27 fl28 fl29 / SC / d=25
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:10 var12:23 var0:1 var1:1
+Execute: move-with-w2-to wp8 wp5 fl25 fl26 fl27 fl28 fl29 fl30 / SC / d=25
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:10 var12:24 var0:1 var1:1
+Execute: move-with-w2-to wp8 wp5 fl26 fl27 fl28 fl29 fl30 fl31 / SC / d=25
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:2 var12:30 var0:1 var1:1
+Execute: move-with-w2-to wp11 wp8 fl32 fl33 fl34 fl35 fl36 fl37 / SC / d=26
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:21 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp10 fl25 fl26 fl27 fl28 fl29 / SC / d=26
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:23 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp10 fl26 fl27 fl28 fl29 fl30 / SC / d=26
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:18 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp10 fl22 fl23 fl24 fl25 fl26 / SC / d=26
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:25 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp10 fl28 fl29 fl30 fl31 fl32 / SC / d=26
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:19 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp10 fl23 fl24 fl25 fl26 fl27 / SC / d=26
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:20 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp10 fl24 fl25 fl26 fl27 fl28 / SC / d=26
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:9 var12:16 var1:1 var2:0
+Execute: move-with-w1-to wp7 wp8 fl20 fl21 fl22 fl23 fl24 / SC / d=26
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:26 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp10 fl29 fl30 fl31 fl32 fl33 / SC / d=26
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:2 var12:27 var0:1 var1:1
+Execute: move-with-w2-to wp11 wp8 fl29 fl30 fl31 fl32 fl33 fl34 / SC / d=26
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:2 var12:28 var0:1 var1:1
+Execute: move-with-w2-to wp11 wp8 fl30 fl31 fl32 fl33 fl34 fl35 / SC / d=26
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:2 var12:29 var0:1 var1:1
+Execute: move-with-w2-to wp11 wp8 fl31 fl32 fl33 fl34 fl35 fl36 / SC / d=26
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:1 var11:3 var12:32 var0:1 var1:1
+Execute: move-with-w2-to wp12 wp11 fl34 fl35 fl36 fl37 fl38 fl39 / SC / d=27
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:10 var12:26 var1:1 var2:0
+Execute: move-with-w1-to wp8 wp11 fl29 fl30 fl31 fl32 fl33 / SC / d=27
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:10 var12:27 var1:1 var2:0
+Execute: move-with-w1-to wp8 wp11 fl30 fl31 fl32 fl33 fl34 / SC / d=27
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:1 var12:23 var1:1 var2:0
+Execute: move-with-w1-to wp10 wp11 fl26 fl27 fl28 fl29 fl30 / SC / d=27
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:10 var12:24 var1:1 var2:0
+Execute: move-with-w1-to wp8 wp11 fl27 fl28 fl29 fl30 fl31 / SC / d=27
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:10 var12:25 var1:1 var2:0
+Execute: move-with-w1-to wp8 wp11 fl28 fl29 fl30 fl31 fl32 / SC / d=27
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:1 var12:24 var1:1 var2:0
+Execute: move-with-w1-to wp10 wp11 fl27 fl28 fl29 fl30 fl31 / SC / d=27
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:0 var5:1 var13:2 var4:0 var11:3 var12:34 var3:0 var0:1 var1:1
+Execute: take-off fl39 fl40 / SC / d=28
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:28 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp8 fl31 fl32 fl33 fl34 fl35 / SC / d=28
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:2 var12:29 var1:1 var2:0
+Execute: move-with-w1-to wp11 wp8 fl32 fl33 fl34 fl35 fl36 / SC / d=28
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:7 var12:28 var1:1 var2:0
+Execute: move-with-w1-to wp5 wp8 fl31 fl32 fl33 fl34 fl35 / SC / d=28
+
+If holds: var9:1 var8:0 var6:1 var5:0 var13:1 var4:1 var11:7 var12:29 var1:1 var2:0
+Execute: move-with-w1-to wp5 wp8 fl32 fl33 fl34 fl35 fl36 / SC / d=28
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:34 var0:1 var1:1 var2:1
+Execute: load-package pkg3 wp12 w0 w2 w2 / SC / d=29
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:23 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl30 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:19 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl27 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:20 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl28 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:16 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl24 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:17 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl25 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:13 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl21 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:14 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl22 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:9 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl18 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:10 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl19 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:6 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl15 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:7 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl16 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:3 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl12 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:4 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl13 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:39 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl9 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:1 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl10 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:36 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl6 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:37 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl7 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:38 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl8 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:22 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl3 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:33 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl4 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:3 var12:35 var0:1 var1:1 var2:1
+Execute: refuel wp12 fl5 fl40 / SC / d=30
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:24 var3:0 var0:1 var1:1 var2:1
+Execute: land fl30 fl31 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:20 var3:0 var0:1 var1:1 var2:1
+Execute: land fl27 fl28 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:21 var3:0 var0:1 var1:1 var2:1
+Execute: land fl28 fl29 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:17 var3:0 var0:1 var1:1 var2:1
+Execute: land fl24 fl25 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:18 var3:0 var0:1 var1:1 var2:1
+Execute: land fl25 fl26 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:14 var3:0 var0:1 var1:1 var2:1
+Execute: land fl21 fl22 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:15 var3:0 var0:1 var1:1 var2:1
+Execute: land fl22 fl23 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:10 var3:0 var0:1 var1:1 var2:1
+Execute: land fl18 fl19 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:12 var3:0 var0:1 var1:1 var2:1
+Execute: land fl19 fl20 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:7 var3:0 var0:1 var1:1 var2:1
+Execute: land fl15 fl16 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:8 var3:0 var0:1 var1:1 var2:1
+Execute: land fl16 fl17 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:4 var3:0 var0:1 var1:1 var2:1
+Execute: land fl12 fl13 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:5 var3:0 var0:1 var1:1 var2:1
+Execute: land fl13 fl14 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:1 var3:0 var0:1 var1:1 var2:1
+Execute: land fl9 fl10 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:2 var3:0 var0:1 var1:1 var2:1
+Execute: land fl10 fl11 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:37 var3:0 var0:1 var1:1 var2:1
+Execute: land fl6 fl7 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:38 var3:0 var0:1 var1:1 var2:1
+Execute: land fl7 fl8 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:39 var3:0 var0:1 var1:1 var2:1
+Execute: land fl8 fl9 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:33 var3:0 var0:1 var1:1 var2:1
+Execute: land fl3 fl4 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:35 var3:0 var0:1 var1:1 var2:1
+Execute: land fl4 fl5 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:36 var3:0 var0:1 var1:1 var2:1
+Execute: land fl5 fl6 / SC / d=31
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:25 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl28 fl29 fl30 fl31 fl32 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:21 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl25 fl26 fl27 fl28 fl29 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:18 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl22 fl23 fl24 fl25 fl26 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:15 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl19 fl20 fl21 fl22 fl23 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:12 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl16 fl17 fl18 fl19 fl20 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:8 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl13 fl14 fl15 fl16 fl17 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:5 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl10 fl11 fl12 fl13 fl14 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:2 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl7 fl8 fl9 fl10 fl11 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:38 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl4 fl5 fl6 fl7 fl8 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:39 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl5 fl6 fl7 fl8 fl9 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:1 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl6 fl7 fl8 fl9 fl10 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:3 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl8 fl9 fl10 fl11 fl12 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:4 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl9 fl10 fl11 fl12 fl13 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:6 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl11 fl12 fl13 fl14 fl15 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:9 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl14 fl15 fl16 fl17 fl18 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:13 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl17 fl18 fl19 fl20 fl21 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:16 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl20 fl21 fl22 fl23 fl24 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:19 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl23 fl24 fl25 fl26 fl27 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:23 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl26 fl27 fl28 fl29 fl30 / SC / d=32
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:10 var12:29 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp8 wp11 fl32 fl33 fl34 fl35 fl36 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:23 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp12 wp11 fl26 fl27 fl28 fl29 fl30 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:19 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp12 wp11 fl23 fl24 fl25 fl26 fl27 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:16 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp12 wp11 fl20 fl21 fl22 fl23 fl24 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:13 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp12 wp11 fl17 fl18 fl19 fl20 fl21 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:9 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp12 wp11 fl14 fl15 fl16 fl17 fl18 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:6 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp12 wp11 fl11 fl12 fl13 fl14 fl15 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:3 var12:3 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp12 wp11 fl8 fl9 fl10 fl11 fl12 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:1 var12:23 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp10 wp11 fl26 fl27 fl28 fl29 fl30 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:1 var12:24 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp10 wp11 fl27 fl28 fl29 fl30 fl31 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:1 var12:26 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp10 wp11 fl29 fl30 fl31 fl32 fl33 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:1 var12:27 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp10 wp11 fl30 fl31 fl32 fl33 fl34 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:10 var12:26 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp8 wp11 fl29 fl30 fl31 fl32 fl33 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:10 var12:27 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp8 wp11 fl30 fl31 fl32 fl33 fl34 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:10 var12:23 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp8 wp11 fl26 fl27 fl28 fl29 fl30 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:10 var12:24 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp8 wp11 fl27 fl28 fl29 fl30 fl31 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:10 var12:19 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp8 wp11 fl23 fl24 fl25 fl26 fl27 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:10 var12:20 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp8 wp11 fl24 fl25 fl26 fl27 fl28 / SC / d=33
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:7 var12:30 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp5 wp8 fl33 fl34 fl35 fl36 fl37 / SC / d=34
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:7 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl12 fl13 fl14 fl15 fl16 / SC / d=34
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:10 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl15 fl16 fl17 fl18 fl19 / SC / d=34
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:14 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl18 fl19 fl20 fl21 fl22 / SC / d=34
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:17 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl21 fl22 fl23 fl24 fl25 / SC / d=34
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:20 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl24 fl25 fl26 fl27 fl28 / SC / d=34
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:24 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp12 fl27 fl28 fl29 fl30 fl31 / SC / d=34
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:27 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp10 fl30 fl31 fl32 fl33 fl34 / SC / d=34
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:28 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp10 fl31 fl32 fl33 fl34 fl35 / SC / d=34
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:7 var12:27 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp5 wp8 fl30 fl31 fl32 fl33 fl34 / SC / d=34
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:7 var12:28 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp5 wp8 fl31 fl32 fl33 fl34 fl35 / SC / d=34
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:7 var12:24 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp5 wp8 fl27 fl28 fl29 fl30 fl31 / SC / d=34
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:7 var12:25 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp5 wp8 fl28 fl29 fl30 fl31 fl32 / SC / d=34
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:4 var12:31 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp2 wp5 fl34 fl35 fl36 fl37 fl38 / SC / d=35
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:1 var12:21 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp10 wp11 fl25 fl26 fl27 fl28 fl29 / SC / d=35
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:1 var12:25 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp10 wp11 fl28 fl29 fl30 fl31 fl32 / SC / d=35
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:10 var12:28 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp8 wp11 fl31 fl32 fl33 fl34 fl35 / SC / d=35
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:10 var12:25 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp8 wp11 fl28 fl29 fl30 fl31 fl32 / SC / d=35
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:4 var12:28 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp2 wp5 fl31 fl32 fl33 fl34 fl35 / SC / d=35
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:10 var12:21 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp8 wp11 fl25 fl26 fl27 fl28 fl29 / SC / d=35
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:4 var12:29 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp2 wp5 fl32 fl33 fl34 fl35 fl36 / SC / d=35
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:0 var12:32 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp1 wp2 fl35 fl36 fl37 fl38 fl39 / SC / d=36
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:2 var12:26 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp11 wp10 fl29 fl30 fl31 fl32 fl33 / SC / d=36
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:7 var12:29 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp5 wp8 fl32 fl33 fl34 fl35 fl36 / SC / d=36
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:7 var12:26 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp5 wp8 fl29 fl30 fl31 fl32 fl33 / SC / d=36
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:0 var11:0 var12:34 var3:0 var0:1 var1:1 var2:1
+Execute: take-off fl39 fl40 / SC / d=37
+
+If holds: var9:1 var10:0 var8:0 var6:1 var7:1 var5:1 var13:0 var4:1 var11:4 var12:30 var0:1 var1:1 var2:1
+Execute: move-with-w0-to wp2 wp5 fl33 fl34 fl35 fl36 fl37 / SC / d=37

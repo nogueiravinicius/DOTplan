@@ -1,0 +1,566 @@
+Mapping:
+
+  var0:0	<-> 	 airborne(q1)
+  var0:1	<-> 	 grounded(q1)
+  var1:0	<-> 	 cokeat(coke1, wp1)
+  var1:1	<-> 	 cokeat(coke1, wp10)
+  var1:2	<-> 	 cokeat(coke1, wp2)
+  var1:3	<-> 	 cokeat(coke1, wp3)
+  var1:4	<-> 	 cokeat(coke1, wp4)
+  var2:0	<-> 	 cokeat(coke2, wp1)
+  var2:1	<-> 	 cokeat(coke2, wp10)
+  var2:2	<-> 	 cokeat(coke2, wp2)
+  var2:3	<-> 	 cokeat(coke2, wp3)
+  var2:4	<-> 	 cokeat(coke2, wp4)
+  var3:0	<-> 	 connected(wp2, wp1)
+  var3:1	<-> 	 not(connected(wp2, wp1))
+  var4:0	<-> 	 finished(q1)
+  var4:1	<-> 	 not(finished(q1))
+  var5:0	<-> 	 holdingcoke(coke1)
+  var5:1	<-> 	 not(holdingcoke(coke1))
+  var6:0	<-> 	 holdingcoke(coke2)
+  var6:1	<-> 	 not(holdingcoke(coke2))
+  var7:0	<-> 	 quadat(q1, wp1)
+  var7:1	<-> 	 quadat(q1, wp10)
+  var7:2	<-> 	 quadat(q1, wp2)
+  var7:3	<-> 	 quadat(q1, wp3)
+  var7:4	<-> 	 quadat(q1, wp4)
+
+Policy:
+
+If holds: quadat(q1, wp3)/cokeat(coke1, wp2)/finished(q1)
+Execute: goal / SC / d=0
+
+If holds: airborne(q1)/quadat(q1, wp1)/cokeat(coke1, wp2)/finished(q1)
+Execute: move-to q1 wp1 wp3 / SC / d=1
+
+If holds: airborne(q1)/connected(wp2, wp1)/quadat(q1, wp2)/cokeat(coke1, wp2)/finished(q1)
+Execute: move-to q1 wp2 wp1 / SC / d=2
+
+If holds: airborne(q1)/connected(wp2, wp1)/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp1)/finished(q1)
+Execute: drop q1 wp2 wp1 coke1 / SC / d=3
+
+If holds: airborne(q1)/connected(wp2, wp1)/quadat(q1, wp1)/holdingcoke(coke1)/cokeat(coke1, wp1)/finished(q1)
+Execute: move-to q1 wp1 wp2 / SC / d=4
+
+If holds: airborne(q1)/connected(wp2, wp1)/quadat(q1, wp10)/holdingcoke(coke1)/cokeat(coke1, wp1)/finished(q1)
+Execute: move-to q1 wp10 wp1 / SC / d=5
+
+If holds: airborne(q1)/quadat(q1, wp10)/holdingcoke(coke1)/cokeat(coke1, wp1)/finished(q1)
+Execute: opendoor q1 wp10 wp1 wp2 / SC / d=6
+
+If holds: airborne(q1)/quadat(q1, wp1)/holdingcoke(coke1)/cokeat(coke1, wp1)/finished(q1)
+Execute: move-to q1 wp1 wp10 / SC / d=7
+
+If holds: grounded(q1)/quadat(q1, wp1)/holdingcoke(coke1)/cokeat(coke1, wp1)/finished(q1)
+Execute: takeoff q1 / SC / d=8
+
+If holds: airborne(q1)/quadat(q1, wp1)/holdingcoke(coke1)/cokeat(coke1, wp1)
+Execute: land q1 / SC / d=9
+
+If holds: airborne(q1)/quadat(q1, wp1)/cokeat(coke1, wp1)
+Execute: pickup q1 coke1 wp1 / SC / d=10
+
+If holds: grounded(q1)/quadat(q1, wp1)/cokeat(coke1, wp1)
+Execute: takeoff q1 / SC / d=11
+
+FSAP:
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp3)/cokeat(coke1, wp1)
+Forbid: pickup q1 coke2 wp3 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp1)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp1 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp10)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp10 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp2)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp2 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp3)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp3 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp4)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp4 coke2 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp1)/cokeat(coke1, wp1)
+Forbid: move-to q1 wp1 wp3 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp3)/cokeat(coke1, wp1)
+Forbid: flysquare q1 / NSC / d=1026
+
+If holds: grounded(q1)/quadat(q1, wp3)/cokeat(coke1, wp1)
+Forbid: takeoff q1 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp3)/cokeat(coke1, wp1)
+Forbid: land q1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke1, wp2)
+Forbid: pickup q1 coke1 wp2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp1)
+Forbid: drop q1 wp2 wp1 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp10)
+Forbid: drop q1 wp2 wp10 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp2)
+Forbid: drop q1 wp2 wp2 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp3)
+Forbid: drop q1 wp2 wp3 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp4)
+Forbid: drop q1 wp2 wp4 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp2)
+Forbid: pickup q1 coke2 wp2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp1)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp1 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp10)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp10 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp2)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp2 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp3)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp3 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp4)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp4 coke2 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp1)
+Forbid: move-to q1 wp1 wp2 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: flysquare q1 / NSC / d=1026
+
+If holds: grounded(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: takeoff q1 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: land q1 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp3)/cokeat(coke1, wp1)
+Forbid: pickup q1 coke2 wp3 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp1)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp1 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp10)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp10 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp2)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp2 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp3)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp3 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp4)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp4 coke2 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp1)/cokeat(coke1, wp1)
+Forbid: move-to q1 wp1 wp3 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp3)/cokeat(coke1, wp1)
+Forbid: flysquare q1 / NSC / d=1026
+
+If holds: grounded(q1)/quadat(q1, wp3)/cokeat(coke1, wp1)
+Forbid: takeoff q1 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp3)/cokeat(coke1, wp1)
+Forbid: land q1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke1, wp2)
+Forbid: pickup q1 coke1 wp2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp1)
+Forbid: drop q1 wp2 wp1 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp10)
+Forbid: drop q1 wp2 wp10 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp2)
+Forbid: drop q1 wp2 wp2 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp3)
+Forbid: drop q1 wp2 wp3 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp4)
+Forbid: drop q1 wp2 wp4 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp2)
+Forbid: pickup q1 coke2 wp2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp1)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp1 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp10)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp10 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp2)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp2 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp3)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp3 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp4)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp4 coke2 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp1)
+Forbid: move-to q1 wp1 wp2 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: flysquare q1 / NSC / d=1026
+
+If holds: grounded(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: takeoff q1 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: land q1 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp3)/cokeat(coke1, wp1)
+Forbid: pickup q1 coke2 wp3 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp1)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp1 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp10)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp10 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp2)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp2 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp3)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp3 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp4)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp4 coke2 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp1)/cokeat(coke1, wp1)
+Forbid: move-to q1 wp1 wp3 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp3)/cokeat(coke1, wp1)
+Forbid: flysquare q1 / NSC / d=1026
+
+If holds: grounded(q1)/quadat(q1, wp3)/cokeat(coke1, wp1)
+Forbid: takeoff q1 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp3)/cokeat(coke1, wp1)
+Forbid: land q1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke1, wp2)
+Forbid: pickup q1 coke1 wp2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp1)
+Forbid: drop q1 wp2 wp1 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp10)
+Forbid: drop q1 wp2 wp10 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp2)
+Forbid: drop q1 wp2 wp2 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp3)
+Forbid: drop q1 wp2 wp3 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp4)
+Forbid: drop q1 wp2 wp4 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp2)
+Forbid: pickup q1 coke2 wp2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp1)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp1 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp10)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp10 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp2)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp2 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp3)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp3 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp4)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp4 coke2 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp1)
+Forbid: move-to q1 wp1 wp2 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: flysquare q1 / NSC / d=1026
+
+If holds: grounded(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: takeoff q1 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: land q1 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp3)/cokeat(coke1, wp1)
+Forbid: pickup q1 coke2 wp3 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp1)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp1 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp10)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp10 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp2)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp2 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp3)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp3 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp4)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp4 coke2 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp1)/cokeat(coke1, wp1)
+Forbid: move-to q1 wp1 wp3 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp3)/cokeat(coke1, wp1)
+Forbid: flysquare q1 / NSC / d=1026
+
+If holds: grounded(q1)/quadat(q1, wp3)/cokeat(coke1, wp1)
+Forbid: takeoff q1 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp3)/cokeat(coke1, wp1)
+Forbid: land q1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke1, wp2)
+Forbid: pickup q1 coke1 wp2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp1)
+Forbid: drop q1 wp2 wp1 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp10)
+Forbid: drop q1 wp2 wp10 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp2)
+Forbid: drop q1 wp2 wp2 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp3)
+Forbid: drop q1 wp2 wp3 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp4)
+Forbid: drop q1 wp2 wp4 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp2)
+Forbid: pickup q1 coke2 wp2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp1)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp1 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp10)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp10 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp2)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp2 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp3)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp3 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp4)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp4 coke2 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp1)
+Forbid: move-to q1 wp1 wp2 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: flysquare q1 / NSC / d=1026
+
+If holds: grounded(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: takeoff q1 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: land q1 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp3)/cokeat(coke1, wp10)
+Forbid: pickup q1 coke2 wp3 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp1)/holdingcoke(coke2)/cokeat(coke1, wp10)
+Forbid: drop q1 wp3 wp1 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp10)/holdingcoke(coke2)/cokeat(coke1, wp10)
+Forbid: drop q1 wp3 wp10 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp2)/holdingcoke(coke2)/cokeat(coke1, wp10)
+Forbid: drop q1 wp3 wp2 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp3)/holdingcoke(coke2)/cokeat(coke1, wp10)
+Forbid: drop q1 wp3 wp3 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp4)/holdingcoke(coke2)/cokeat(coke1, wp10)
+Forbid: drop q1 wp3 wp4 coke2 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp1)/cokeat(coke1, wp10)
+Forbid: move-to q1 wp1 wp3 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp3)/cokeat(coke1, wp10)
+Forbid: flysquare q1 / NSC / d=1026
+
+If holds: grounded(q1)/quadat(q1, wp3)/cokeat(coke1, wp10)
+Forbid: takeoff q1 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp3)/cokeat(coke1, wp10)
+Forbid: land q1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke1, wp2)
+Forbid: pickup q1 coke1 wp2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp1)
+Forbid: drop q1 wp2 wp1 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp10)
+Forbid: drop q1 wp2 wp10 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp2)
+Forbid: drop q1 wp2 wp2 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp3)
+Forbid: drop q1 wp2 wp3 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp4)
+Forbid: drop q1 wp2 wp4 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp2)
+Forbid: pickup q1 coke2 wp2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp1)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp1 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp10)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp10 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp2)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp2 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp3)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp3 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp4)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp4 coke2 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp1)
+Forbid: move-to q1 wp1 wp2 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: flysquare q1 / NSC / d=1026
+
+If holds: grounded(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: takeoff q1 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: land q1 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp3)/cokeat(coke1, wp10)
+Forbid: pickup q1 coke2 wp3 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp1)/holdingcoke(coke2)/cokeat(coke1, wp10)
+Forbid: drop q1 wp3 wp1 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp10)/holdingcoke(coke2)/cokeat(coke1, wp10)
+Forbid: drop q1 wp3 wp10 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp2)/holdingcoke(coke2)/cokeat(coke1, wp10)
+Forbid: drop q1 wp3 wp2 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp3)/holdingcoke(coke2)/cokeat(coke1, wp10)
+Forbid: drop q1 wp3 wp3 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp4)/holdingcoke(coke2)/cokeat(coke1, wp10)
+Forbid: drop q1 wp3 wp4 coke2 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp1)/cokeat(coke1, wp10)
+Forbid: move-to q1 wp1 wp3 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp3)/cokeat(coke1, wp10)
+Forbid: flysquare q1 / NSC / d=1026
+
+If holds: grounded(q1)/quadat(q1, wp3)/cokeat(coke1, wp10)
+Forbid: takeoff q1 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp3)/cokeat(coke1, wp10)
+Forbid: land q1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke1, wp2)
+Forbid: pickup q1 coke1 wp2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp1)
+Forbid: drop q1 wp2 wp1 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp10)
+Forbid: drop q1 wp2 wp10 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp2)
+Forbid: drop q1 wp2 wp2 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp3)
+Forbid: drop q1 wp2 wp3 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/holdingcoke(coke1)/cokeat(coke1, wp4)
+Forbid: drop q1 wp2 wp4 coke1 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp2)
+Forbid: pickup q1 coke2 wp2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp1)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp1 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp10)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp10 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp2)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp2 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp3)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp3 coke2 / NSC / d=1026
+
+If holds: not(connected(wp2, wp1))/quadat(q1, wp2)/cokeat(coke2, wp4)/holdingcoke(coke2)
+Forbid: drop q1 wp2 wp4 coke2 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp1)
+Forbid: move-to q1 wp1 wp2 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: flysquare q1 / NSC / d=1026
+
+If holds: grounded(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: takeoff q1 / NSC / d=1026
+
+If holds: airborne(q1)/not(connected(wp2, wp1))/quadat(q1, wp2)
+Forbid: land q1 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp3)/cokeat(coke1, wp1)
+Forbid: pickup q1 coke2 wp3 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp1)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp1 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp10)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp10 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp2)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp2 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp3)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp3 coke2 / NSC / d=1026
+
+If holds: quadat(q1, wp3)/cokeat(coke2, wp4)/holdingcoke(coke2)/cokeat(coke1, wp1)
+Forbid: drop q1 wp3 wp4 coke2 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp1)/cokeat(coke1, wp1)
+Forbid: move-to q1 wp1 wp3 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp3)/cokeat(coke1, wp1)
+Forbid: flysquare q1 / NSC / d=1026
+
+If holds: grounded(q1)/quadat(q1, wp3)/cokeat(coke1, wp1)
+Forbid: takeoff q1 / NSC / d=1026
+
+If holds: airborne(q1)/quadat(q1, wp3)/cokeat(coke1, wp1)
+Forbid: land q1 / NSC / d=1026
+
