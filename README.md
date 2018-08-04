@@ -43,6 +43,9 @@ sudo apt-get install libx32gcc-4.8-dev libc6-dev-i386
 sudo apt-get install libc6-dev-i386
 sudo apt-get install gcc-multilib g++-multilib
 sudo apt-get install python-pip
+```
+Policy to DOT Conditional Plan dependecies (Planner-parser):
+```
 sudo pip install networkx
 sudo apt-get install graphviz libgraphviz-dev graphviz-dev pkg-config
 sudo pip install pygraphviz
