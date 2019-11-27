@@ -4,7 +4,11 @@ DOTPlan Framework for ROS Systems
 This framework incorporates Probabilistic AI Planning into ROS systems. Its default planner is Prob-PRP, a MAXPROB solver. The action dispatching interface is based on ROSPlan, 
 Its demo is a expansion from ROSPlan Interface Quadrotor, using navigation library. This framework relays is based on the execution of a FSM given in DOT format. It includes a visualization tool based on XDot. It was implemented for ROS Indigo running on Ubuntu 14.04.
 
+## Citations
 
+Nogueira, Vinicius Veloso Eleutério. "Planejamento de Missão para VANTs em Ambientes Estocásticos." (2018). Master's Thesis. Universidade Federal de Itajubá.
+
+Nogueira, Vinıcius Veloso Eleuterio, and Luiz Edival de Souza. "UAV MISSION PLANNING AND EXECUTION VIA NON-DETERMINISTIC AI PLANNING ON ROS."2018, XXII Congresso Brasileiro de Automática.
 
 ## Components
 
